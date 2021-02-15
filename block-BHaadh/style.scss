@@ -1,0 +1,135 @@
+.container{
+    margin-bottom: 100px;
+    width: 300px;
+    height: 500px;
+    background-color: lightgreen;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+body{
+    background-color:lightgreen; ;
+}
+h2{
+    text-align: center;
+    font-size: 2rem;
+    color: rgb(131, 35, 0);
+}
+.box1{
+        box-sizing: content-box;
+        width: 100px;
+        height: 100px;
+        background-color: rgba(lightpink,0.7);
+        border: 1px solid black;
+        position: absolute;
+
+}
+.b1-left{
+    transform: skewy(30deg);
+    transition: 2s linear background-color;
+    &:hover{
+        background-color: cornflowerblue;
+    }
+}
+.b1-right{
+    width: 90px;
+    transform: skewy(-30deg);
+    left: 209px;
+    transition: 1s linear background-color;
+    &:hover{
+        background-color: cornflowerblue;
+    }
+}
+.b1-top{
+    background-color: darkblue;
+    transform:rotate(60deg) skewY(-30deg);
+    top: 130px;
+    left: 153px;
+    transition: 2s linear background-color;
+    &:hover{
+        background-color: cornflowerblue;
+    }
+}
+.scene{
+    width: 200px;
+    height: 200px;
+    perspective: 600px;
+}
+.container-cube{
+    margin: 100px;
+    width: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transform: perspective(500px) translateZ(-100px);
+    transition: 2s transform ease;
+    &:hover{
+        .front{
+            color: white;
+            transform: rotateY(180deg) translateZ(-100px); ;
+            background-color: rgba(rgb(190, 172, 68),0.6)
+
+        }
+        .back{
+            color: black;
+            transform: rotateY(0deg) translateZ(100px); 
+            background-color: rgba(pink,0.6)
+        }
+        .right{
+            transform: rotateY( -90deg) translateZ(-100px);
+            background-color: rgba(purple,0.6)
+        }
+        .left{
+            transform: rotateY(90deg) translateZ(100px);
+            background-color: rgba(olive,0.6)
+        }
+        .top{
+            transform: rotateX( -90deg) translateZ(100px);
+            background-color: rgba(cyan,0.6)
+        }
+        .bottom{
+            transform: rotateX(90deg) translateZ(-100px); 
+            
+            background-color: rgba(indigo,0.6)
+        }
+
+    }
+}
+.cube{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    color: white;
+    width: 200px;
+    height: 200px;
+}
+.front{
+    color: black;
+    transform: rotateY(0deg) translateZ(100px); ;
+    background-color: rgba(rgb(190, 172, 68),0.6)
+
+}
+.back{
+    color: white;
+    transform: rotateY(180deg) translateZ(100px); 
+    background-color: rgba(pink,0.6)
+}
+.right{
+    transform: rotateY( 90deg) translateZ(100px);
+    background-color: rgba(purple,0.6)
+}
+.left{
+    transform: rotateY(-90deg) translateZ(100px);
+    background-color: rgba(olive,0.6)
+}
+.top{
+    transform: rotateX( 90deg) translateZ(100px);
+    background-color: rgba(cyan,0.6)
+}
+.bottom{
+    transform: rotateX(-90deg) translateZ(100px); 
+    
+    background-color: rgba(indigo,0.6)
+}
