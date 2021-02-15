@@ -1,4 +1,5 @@
 .container {
+  margin-bottom: 100px;
   width: 300px;
   height: 500px;
   background-color: lightgreen;
@@ -15,6 +16,10 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+body {
+  background-color: lightgreen;
 }
 
 h2 {
@@ -45,6 +50,7 @@ h2 {
 }
 
 .b1-right {
+  width: 90px;
   -webkit-transform: skewy(-30deg);
           transform: skewy(-30deg);
   left: 209px;
@@ -78,16 +84,17 @@ h2 {
 }
 
 .container-cube {
+  margin: 100px;
   width: 100%;
   position: relative;
   -webkit-transform-style: preserve-3d;
           transform-style: preserve-3d;
   -webkit-transform: perspective(500px) translateZ(-100px);
           transform: perspective(500px) translateZ(-100px);
-  -webkit-transition: 2s -webkit-transform linear;
-  transition: 2s -webkit-transform linear;
-  transition: 2s transform linear;
-  transition: 2s transform linear, 2s -webkit-transform linear;
+  -webkit-transition: 2s -webkit-transform ease;
+  transition: 2s -webkit-transform ease;
+  transition: 2s transform ease;
+  transition: 2s transform ease, 2s -webkit-transform ease;
 }
 
 .container-cube:hover .front {
